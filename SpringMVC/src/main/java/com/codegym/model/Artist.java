@@ -11,10 +11,13 @@ public class Artist{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+    private int age;
+    private Long albumId;
 
     @ManyToOne
-    @JoinColumn(name = "ArtistId")
+    @JoinColumn(name = "AlbumId")
     private Artist artist;
+
 
     public Artist getArtist() {
         return artist;
@@ -40,4 +43,13 @@ public class Artist{
     public void setName(String name) {
         this.name = name;
     }
+
+    public Long getAlbumId() {  { return id; }
+    }
+
+    public void setAlbumId(Long albumId) { this.id = id;}
+
+    public void setAlbum(Album album) { this.al
+    }
+}
 }
